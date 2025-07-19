@@ -1,4 +1,4 @@
-# Personal Portfolio
+# Anas Personal Portfolio
 
 A modern, responsive portfolio website built with Next.js and deployed on GitHub Pages.
 
@@ -17,8 +17,9 @@ A modern, responsive portfolio website built with Next.js and deployed on GitHub
 - React 19
 - TypeScript
 - Tailwind CSS
-- Framer Motion
+- shadcn/ui components
 - EmailJS
+- Framer Motion
 
 ## Development
 
