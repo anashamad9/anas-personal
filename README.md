@@ -1,26 +1,31 @@
 # Personal Portfolio
 
-A modern, responsive portfolio website built with Next.js, featuring:
+A modern, responsive portfolio website built with Next.js, featuring internationalization support for English and Arabic.
 
-- Multi-language support (English/Arabic)
-- Dark/Light theme toggle
-- Contact form with EmailJS integration
-- Articles section
-- Business card page
-- Responsive design with Tailwind CSS
+## Features
 
-## Deployment
+- 🌐 Multi-language support (English/Arabic)
+- 📱 Fully responsive design
+- 🎨 Modern UI with Tailwind CSS
+- 📧 Contact form with EmailJS integration
+- 🌙 Dark/Light theme support
+- 📄 Articles/Blog section
+- 💼 Professional business card page
 
-This site is deployed using GitHub Pages with GitHub Actions.
+## Live Demo
+
+Visit the live site: [https://anashamad9.github.io/anas-personal](https://anashamad9.github.io/anas-personal)
 
 ## Local Development
 
-\`\`\`bash
-npm install
-npm run dev
-\`\`\`
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000)
 
-Visit `http://localhost:3000` to view the site locally.
+## Deployment
+
+This site is automatically deployed to GitHub Pages using GitHub Actions whenever changes are pushed to the main branch.
 
 ## Technologies Used
 
@@ -31,6 +36,3 @@ Visit `http://localhost:3000` to view the site locally.
 - Framer Motion
 - EmailJS
 - Radix UI Components
-\`\`\`
-
-Now let's make sure the Next.js config is correct:
