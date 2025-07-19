@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { HomeIcon, Mail, Phone, MapPin, Globe, Github, Twitter, QrCode, X } from "lucide-react"
+import { HomeIcon, Mail, Phone, MapPin, QrCode, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import Image from "next/image"
 import Link from "next/link"
@@ -18,7 +18,7 @@ export default function BusinessCard({ params: { lang } }: { params: { lang: Loc
     setIsLoaded(true)
   }, [])
 
-  const currentUrl = typeof window !== "undefined" ? window.location.origin + "/card" : "https://yoursite.com/card"
+  const currentUrl = typeof window !== "undefined" ? window.location.href : `https://yoursite.com/${lang}/card`
 
   const handleCardClick = () => {
     if (!showQR) {
@@ -47,7 +47,7 @@ export default function BusinessCard({ params: { lang } }: { params: { lang: Loc
         }`}
       >
         <Card
-          className="w-[400px] h-[550px] overflow-hidden relative shadow-2xl border-0 rounded-3xl cursor-pointer"
+          className="w-[400px] h-[550px] overflow-hidden relative border-0 rounded-3xl cursor-pointer"
           onClick={handleCardClick}
         >
           {/* Background Image */}
@@ -159,46 +159,9 @@ export default function BusinessCard({ params: { lang } }: { params: { lang: Loc
                   </div>
                   <div className="flex items-center gap-3 text-white/90">
                     <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                      <Globe className="w-4 h-4" />
-                    </div>
-                    <span className="text-sm">anas.portfolio</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-white/90">
-                    <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                       <MapPin className="w-4 h-4" />
                     </div>
                     <span className="text-sm">Amman, Jordan</span>
-                  </div>
-                </div>
-
-                {/* Social Links */}
-                <div className="space-y-3">
-                  <p className="text-white/70 text-xs uppercase tracking-wider">Connect with me</p>
-                  <div className="flex gap-3">
-                    <a
-                      href="https://github.com/anashamad9"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-white/90 hover:text-white transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                        <Github className="w-4 h-4" />
-                      </div>
-                      <span className="text-sm">GitHub</span>
-                    </a>
-                    <a
-                      href="https://x.com/its_anas9"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-white/90 hover:text-white transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                        <Twitter className="w-4 h-4" />
-                      </div>
-                      <span className="text-sm">Twitter</span>
-                    </a>
                   </div>
                 </div>
 

@@ -21,6 +21,7 @@ import {
   ChevronDown,
   Linkedin,
   Bot,
+  Phone,
 } from "lucide-react"
 import ContactModal from "@/components/contact-modal" // Import ContactModal
 
@@ -518,6 +519,9 @@ function SocialLinks({
       case "Email":
       case "البريد الإلكتروني":
         return <Mail className="h-4 w-4" />
+      case "Phone":
+      case "الهاتف":
+        return <Phone className="h-4 w-4" />
       case "X":
         return <Twitter className="h-4 w-4" />
       case "LinkedIn":
@@ -545,35 +549,26 @@ function SocialLinks({
       <div className="flex flex-col gap-3">
         {links.map((link) => (
           <div key={link.label} className="group">
-            {link.label === "Email" || link.label === "البريد الإلكتروني" ? (
-              <button
-                onClick={() => navigator.clipboard.writeText(link.value!)}
-                className="w-full text-sm text-foreground hover:text-muted-foreground transition-colors flex items-center justify-between p-2 rounded-lg hover:bg-accent/10 group"
-              >
-                <div className="flex items-center gap-2">
-                  {getIcon(link.label)}
-                  <span>{link.label}</span>
-                  {link.username && <span className="text-xs text-muted-foreground">({link.username})</span>}
-                </div>
-                <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </button>
-            ) : (
-              <a
-                href={link.href}
-                className="w-full text-sm text-foreground hover:text-muted-foreground transition-colors flex items-center justify-between p-2 rounded-lg hover:bg-accent/10 group"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <div className="flex items-center gap-2">
-                  {getIcon(link.label)}
-                  <span>{link.label}</span>
-                  {link.username && <span className="text-xs text-muted-foreground">({link.username})</span>}
-                </div>
-                <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-            )}
+            <a
+              href={link.href}
+              className="w-full text-sm text-foreground hover:text-muted-foreground transition-colors flex items-center justify-between p-2 rounded-lg hover:bg-accent/10 group"
+              rel="noopener noreferrer"
+              target={
+                link.label === "Email" ||
+                link.label === "البريد الإلكتروني" ||
+                link.label === "Phone" ||
+                link.label === "الهاتف"
+                  ? "_self"
+                  : "_blank"
+              }
+            >
+              <div className="flex items-center gap-2">
+                {getIcon(link.label)}
+                <span>{link.display || link.username || link.label}</span>
+              </div>
+              <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
           </div>
         ))}
       </div>

@@ -1,35 +1,30 @@
-# Anas Personal Portfolio
+# Simple Portfolio
 
-A modern, responsive portfolio website built with Next.js and deployed on GitHub Pages.
+*Automatically synced with your [v0.dev](https://v0.dev) deployments*
 
-## Features
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/anashamad9s-projects/v0-simple-portfolio)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/ApU99AShkZi)
 
-- Responsive design
-- Dark/Light theme toggle
-- Multi-language support (English/Arabic)
-- Contact form with EmailJS integration
-- Articles section
-- Business card page
+## Overview
 
-## Technologies Used
-
-- Next.js 15
-- React 19
-- TypeScript
-- Tailwind CSS
-- shadcn/ui components
-- EmailJS
-- Framer Motion
-
-## Development
-
-\`\`\`bash
-npm install
-npm run dev
-\`\`\`
+This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
+Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
 
 ## Deployment
 
-This site is automatically deployed to GitHub Pages using GitHub Actions.
+Your project is live at:
 
-Visit: https://anashamad9.github.io/anas-personal
+**[https://vercel.com/anashamad9s-projects/v0-simple-portfolio](https://vercel.com/anashamad9s-projects/v0-simple-portfolio)**
+
+## Build your app
+
+Continue building your app on:
+
+**[https://v0.dev/chat/projects/ApU99AShkZi](https://v0.dev/chat/projects/ApU99AShkZi)**
+
+## How It Works
+
+1. Create and modify your project using [v0.dev](https://v0.dev)
+2. Deploy your chats from the v0 interface
+3. Changes are automatically pushed to this repository
+4. Vercel deploys the latest version from this repository
