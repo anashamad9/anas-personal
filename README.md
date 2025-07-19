@@ -1,30 +1,43 @@
-# Simple Portfolio
+# Personal Portfolio
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/anashamad9s-projects/v0-simple-portfolio)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/ApU99AShkZi)
+## Features
 
-## Overview
+- 🌐 Internationalization (English/Arabic)
+- 🌙 Dark/Light mode toggle
+- 📱 Fully responsive design
+- 📧 Contact form with EmailJS integration
+- 🎨 Modern UI with smooth animations
+- 📄 Business card page
+- 📝 Articles/Blog section
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Live Demo
+
+Visit the live site at: [https://anashamad9.github.io/anas-personal](https://anashamad9.github.io/anas-personal)
+
+## Local Development
+
+\`\`\`bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+\`\`\`
 
 ## Deployment
 
-Your project is live at:
+This site is automatically deployed to GitHub Pages using GitHub Actions whenever changes are pushed to the main branch.
 
-**[https://vercel.com/anashamad9s-projects/v0-simple-portfolio](https://vercel.com/anashamad9s-projects/v0-simple-portfolio)**
+## Technologies Used
 
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/ApU99AShkZi](https://v0.dev/chat/projects/ApU99AShkZi)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- EmailJS
+- Radix UI Components
