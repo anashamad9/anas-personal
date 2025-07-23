@@ -1,30 +1,116 @@
-# Simple Portfolio
+# Anas Hamad - Portfolio
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A modern, multilingual portfolio website built with Next.js, featuring Arabic and English language support.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/anashamad9s-projects/v0-simple-portfolio)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/ApU99AShkZi)
+## 🚀 Features
 
-## Overview
+- **Multilingual Support**: Full Arabic and English localization
+- **Responsive Design**: Optimized for all device sizes
+- **Modern UI**: Built with Tailwind CSS and shadcn/ui components
+- **Interactive Business Card**: QR code generation and contact details
+- **Contact Form**: Integrated with EmailJS for direct messaging
+- **Articles Section**: Blog-style content management
+- **Dark/Light Theme**: System-aware theme switching
+- **Static Export**: Optimized for GitHub Pages deployment
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 🛠️ Tech Stack
 
-## Deployment
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui + Radix UI
+- **Icons**: Lucide React
+- **Fonts**: Inter (Latin) + IBM Plex Sans Arabic
+- **Deployment**: GitHub Pages
+- **Contact Form**: EmailJS
 
-Your project is live at:
+## 📦 Installation
 
-**[https://vercel.com/anashamad9s-projects/v0-simple-portfolio](https://vercel.com/anashamad9s-projects/v0-simple-portfolio)**
+1. Clone the repository:
+\`\`\`bash
+git clone https://github.com/anashamad9/ppp.git
+cd ppp
+\`\`\`
 
-## Build your app
+2. Install dependencies:
+\`\`\`bash
+npm install
+\`\`\`
 
-Continue building your app on:
+3. Run the development server:
+\`\`\`bash
+npm run dev
+\`\`\`
 
-**[https://v0.dev/chat/projects/ApU99AShkZi](https://v0.dev/chat/projects/ApU99AShkZi)**
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## How It Works
+## 🌐 Deployment
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+### GitHub Pages
+
+1. Push your code to GitHub
+2. Enable GitHub Pages in repository settings
+3. The GitHub Actions workflow will automatically build and deploy
+
+### Manual Deployment
+
+\`\`\`bash
+npm run build
+\`\`\`
+
+The static files will be generated in the `out` directory.
+
+## 📧 Contact Form Setup
+
+To enable the contact form:
+
+1. Create an account at [EmailJS](https://www.emailjs.com/)
+2. Create a service and template
+3. Update the credentials in `components/contact-modal.tsx`:
+   - `serviceId`
+   - `templateId` 
+   - `publicKey`
+
+## 🌍 Internationalization
+
+The site supports:
+- **English** (`/en/`)
+- **Arabic** (`/ar/`)
+
+Language detection is automatic based on browser preferences, with manual switching available.
+
+## 📱 Business Card
+
+Interactive business card feature includes:
+- QR code generation for easy sharing
+- Contact information display
+- Responsive design for mobile viewing
+
+## 🎨 Customization
+
+### Content
+- Update personal information in `dictionaries/en.json` and `dictionaries/ar.json`
+- Replace images in the `public/images/` directory
+- Modify the color scheme in `tailwind.config.js`
+
+### Styling
+- All styles use Tailwind CSS
+- Theme configuration in `app/globals.css`
+- Component styles follow shadcn/ui patterns
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📞 Contact
+
+- **Email**: hi.anashamad@gmail.com
+- **Phone**: +962795874662
+- **Location**: Amman, Jordan
+
+---
+
+Built with ❤️ by [Anas Hamad](https://github.com/anashamad9)

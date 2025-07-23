@@ -7,7 +7,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import type { Locale } from "@/types/locale" // Declare Locale type
+import type { Locale } from "@/i18n-config"
 
 export default function BusinessCard({ params: { lang } }: { params: { lang: Locale } }) {
   const [isLoaded, setIsLoaded] = useState(false)

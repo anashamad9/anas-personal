@@ -3,7 +3,7 @@ const nextConfig = {
   output: "export",
   trailingSlash: true,
   images: {
-    domains: ["vercel.com", "assets.vercel.com", "hebbkx1anhila5yf.public.blob.vercel-storage.com"],
+    domains: ["vercel.com", "assets.vercel.com", "hebbkx1anhila5yf.public.blob.vercel-storage.com", "api.qrserver.com"],
     unoptimized: true,
   },
   eslint: {
@@ -12,9 +12,13 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Add base path if your repo name is not the domain
+  // GitHub Pages configuration
   basePath: process.env.NODE_ENV === "production" ? "/ppp" : "",
   assetPrefix: process.env.NODE_ENV === "production" ? "/ppp/" : "",
+  // Ensure static export works properly
+  experimental: {
+    esmExternals: false,
+  },
 }
 
 module.exports = nextConfig

@@ -1,12 +1,12 @@
 {
-  "name": "my-v0-project",
+  "name": "anas-hamad-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
-    "deploy": "npm run export && touch out/.nojekyll && cp public/index.html out/index.html",
+    "deploy": "npm run build && touch out/.nojekyll && cp public/index.html out/index.html",
     "dev": "next dev",
-    "export": "next build && next export",
+    "export": "next build",
     "lint": "next lint",
     "start": "next start"
   },
@@ -66,6 +66,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/negotiator": "^0.6.3",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
