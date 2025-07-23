@@ -16,6 +16,8 @@ const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   variable: "--font-ibm-plex-sans-arabic",
+  preload: true,
+  fallback: ["Noto Sans Arabic", "Arial Unicode MS", "Tahoma", "sans-serif"],
 })
 
 export async function generateStaticParams() {

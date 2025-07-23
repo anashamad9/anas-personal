@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas Hamad - Portfolio</title>
+    <script>
+        // Client-side language detection and redirect
+        function getPreferredLanguage() {
+            // Check localStorage first
+            const savedLang = localStorage.getItem('preferred-language');
+            if (savedLang && ['en', 'ar'].includes(savedLang)) {
+                return savedLang;
+            }
+            
+            // Check browser language
+            const browserLang = navigator.language.split('-')[0];
+            if (['en', 'ar'].includes(browserLang)) {
+                return browserLang;
+            }
+            
+            // Default fallback
+            return 'en';
+        }
+        
+        // Redirect immediately
+        const preferredLang = getPreferredLanguage();
+        localStorage.setItem('preferred-language', preferredLang);
+        
+        // Handle GitHub Pages base path
+        const basePath = window.location.pathname.includes('/ppp') ? '/ppp' : '';
+        window.location.replace(basePath + '/' + preferredLang + '/');
+    </script>
+</head>
+<body>
+    <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: system-ui;">
+        <div style="text-align: center;">
+            <div style="width: 32px; height: 32px; border: 2px solid #e5e7eb; border-top: 2px solid #3b82f6; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 16px;"></div>
+            <p style="color: #6b7280;">Redirecting...</p>
+        </div>
+    </div>
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</body>
+</html>

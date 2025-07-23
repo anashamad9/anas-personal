@@ -11,9 +11,14 @@ export default function LanguageSwitcher({ lang }: { lang: Locale }) {
 
   const redirectedPathName = (locale: Locale) => {
     if (!pathName) return "/"
+
+    // Handle base path for GitHub Pages
+    const basePath = process.env.NODE_ENV === "production" ? "/ppp" : ""
+
     const segments = pathName.split("/")
     segments[1] = locale
-    return segments.join("/")
+
+    return basePath + segments.join("/")
   }
 
   const otherLocale = lang === "en" ? "ar" : "en"

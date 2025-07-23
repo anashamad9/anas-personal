@@ -26,6 +26,9 @@ export default function ContactModal({
   const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState("")
 
+  const currentUrl =
+    typeof window !== "undefined" ? window.location.href : `https://anashamad9.github.io/ppp/${lang}/card`
+
   if (!isOpen) return null
 
   const handleSubmit = async (e: React.FormEvent) => {
